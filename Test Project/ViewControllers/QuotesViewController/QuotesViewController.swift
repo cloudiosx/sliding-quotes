@@ -92,13 +92,11 @@ extension QuotesViewController: UIScrollViewDelegate {
         if scrollView.contentOffset.y > 0 || scrollView.contentOffset.y < 0 {
             scrollView.contentOffset.y = 0
         }
-        
-        
-    }
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
         pageControl.currentPage = Int(pageIndex)
         viewModel.currentIndex = Int(pageIndex)
+    }
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         timer.invalidate()
     }
 }
