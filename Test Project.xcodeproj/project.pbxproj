@@ -19,6 +19,8 @@
 		63FF8D2E29145DA600F43830 /* Test_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF8D2D29145DA600F43830 /* Test_ProjectUITestsLaunchTests.swift */; };
 		63FF8D3C29145E1500F43830 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF8D3B29145E1500F43830 /* Quote.swift */; };
 		63FF8D3F29145F4700F43830 /* AllQuotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 63FF8D3E29145F4700F43830 /* AllQuotes.json */; };
+		63FF8D432914606C00F43830 /* QuoteSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF8D422914606C00F43830 /* QuoteSlideView.swift */; };
+		63FF8D45291460C100F43830 /* QuoteSlideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63FF8D44291460C100F43830 /* QuoteSlideView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		63FF8D2D29145DA600F43830 /* Test_ProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_ProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		63FF8D3B29145E1500F43830 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		63FF8D3E29145F4700F43830 /* AllQuotes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AllQuotes.json; sourceTree = "<group>"; };
+		63FF8D422914606C00F43830 /* QuoteSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteSlideView.swift; sourceTree = "<group>"; };
+		63FF8D44291460C100F43830 /* QuoteSlideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuoteSlideView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +109,9 @@
 		63FF8D0629145DA500F43830 /* Test Project */ = {
 			isa = PBXGroup;
 			children = (
+				63FF8D402914603900F43830 /* Views */,
 				63FF8D3D29145EF700F43830 /* Persistence */,
-				63FF8D3A29145E0300F43830 /* Model */,
+				63FF8D3A29145E0300F43830 /* Models */,
 				63FF8D0729145DA500F43830 /* AppDelegate.swift */,
 				63FF8D0929145DA500F43830 /* SceneDelegate.swift */,
 				63FF8D0B29145DA500F43830 /* ViewController.swift */,
@@ -135,12 +140,12 @@
 			path = "Test ProjectUITests";
 			sourceTree = "<group>";
 		};
-		63FF8D3A29145E0300F43830 /* Model */ = {
+		63FF8D3A29145E0300F43830 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				63FF8D3B29145E1500F43830 /* Quote.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		63FF8D3D29145EF700F43830 /* Persistence */ = {
@@ -150,6 +155,23 @@
 				63FF8D3E29145F4700F43830 /* AllQuotes.json */,
 			);
 			path = Persistence;
+			sourceTree = "<group>";
+		};
+		63FF8D402914603900F43830 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				63FF8D412914605000F43830 /* QuoteSlideView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		63FF8D412914605000F43830 /* QuoteSlideView */ = {
+			isa = PBXGroup;
+			children = (
+				63FF8D422914606C00F43830 /* QuoteSlideView.swift */,
+				63FF8D44291460C100F43830 /* QuoteSlideView.xib */,
+			);
+			path = QuoteSlideView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +282,7 @@
 				63FF8D1729145DA600F43830 /* LaunchScreen.storyboard in Resources */,
 				63FF8D1429145DA600F43830 /* Assets.xcassets in Resources */,
 				63FF8D0F29145DA500F43830 /* Main.storyboard in Resources */,
+				63FF8D45291460C100F43830 /* QuoteSlideView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +312,7 @@
 				63FF8D0829145DA500F43830 /* AppDelegate.swift in Sources */,
 				63FF8D0A29145DA500F43830 /* SceneDelegate.swift in Sources */,
 				63FF8D1229145DA500F43830 /* Test_Project.xcdatamodeld in Sources */,
+				63FF8D432914606C00F43830 /* QuoteSlideView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
