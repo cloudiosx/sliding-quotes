@@ -1,24 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4S4-qF-zXO">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Quotes View Controller-->
+        <scene sceneID="dcc-ri-c6s">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="4S4-qF-zXO" customClass="QuotesViewController" customModule="Test_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OJj-2E-U6c">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" bounces="NO" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0v-vD-sY7">
+                                <rect key="frame" x="0.0" y="7.6666666666666856" width="393" height="852"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="YVX-uu-cLg">
+                                <rect key="frame" x="129.33333333333331" y="792" width="134.33333333333331" height="26"/>
+                                <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="tintColor"/>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GYD-tb-sI7"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GYD-tb-sI7" firstAttribute="bottom" secondItem="YVX-uu-cLg" secondAttribute="bottom" id="5W2-92-3QJ"/>
+                            <constraint firstItem="I0v-vD-sY7" firstAttribute="width" secondItem="OJj-2E-U6c" secondAttribute="width" id="FnE-Jg-W07"/>
+                            <constraint firstItem="I0v-vD-sY7" firstAttribute="height" secondItem="OJj-2E-U6c" secondAttribute="height" id="O8R-mZ-VkT"/>
+                            <constraint firstItem="I0v-vD-sY7" firstAttribute="centerY" secondItem="GYD-tb-sI7" secondAttribute="centerY" constant="-5" id="P9s-5u-gMs"/>
+                            <constraint firstItem="I0v-vD-sY7" firstAttribute="centerX" secondItem="GYD-tb-sI7" secondAttribute="centerX" id="m2j-tv-zdh"/>
+                            <constraint firstItem="YVX-uu-cLg" firstAttribute="centerX" secondItem="OJj-2E-U6c" secondAttribute="centerX" id="xah-H5-tYI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pageControl" destination="YVX-uu-cLg" id="kuc-Fc-OgY"/>
+                        <outlet property="scrollView" destination="I0v-vD-sY7" id="BlT-6x-mfH"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gU3-pP-wNY" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="971" y="80"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		63FF8D0829145DA500F43830 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF8D0729145DA500F43830 /* AppDelegate.swift */; };
 		63FF8D0A29145DA500F43830 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF8D0929145DA500F43830 /* SceneDelegate.swift */; };
-		63FF8D0C29145DA500F43830 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF8D0B29145DA500F43830 /* ViewController.swift */; };
 		63FF8D0F29145DA500F43830 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63FF8D0D29145DA500F43830 /* Main.storyboard */; };
 		63FF8D1229145DA500F43830 /* Test_Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63FF8D1029145DA500F43830 /* Test_Project.xcdatamodeld */; };
 		63FF8D1429145DA600F43830 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63FF8D1329145DA600F43830 /* Assets.xcassets */; };
@@ -21,6 +20,8 @@
 		63FF8D3F29145F4700F43830 /* AllQuotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 63FF8D3E29145F4700F43830 /* AllQuotes.json */; };
 		63FF8D432914606C00F43830 /* QuoteSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF8D422914606C00F43830 /* QuoteSlideView.swift */; };
 		63FF8D45291460C100F43830 /* QuoteSlideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63FF8D44291460C100F43830 /* QuoteSlideView.xib */; };
+		63FF8D492914614F00F43830 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF8D482914614F00F43830 /* QuotesViewController.swift */; };
+		63FF8D4D2914618B00F43830 /* QuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF8D4C2914618B00F43830 /* QuotesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,6 @@
 		63FF8D0429145DA500F43830 /* Test Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63FF8D0729145DA500F43830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63FF8D0929145DA500F43830 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		63FF8D0B29145DA500F43830 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		63FF8D0E29145DA500F43830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63FF8D1129145DA500F43830 /* Test_Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Test_Project.xcdatamodel; sourceTree = "<group>"; };
 		63FF8D1329145DA600F43830 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +59,8 @@
 		63FF8D3E29145F4700F43830 /* AllQuotes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AllQuotes.json; sourceTree = "<group>"; };
 		63FF8D422914606C00F43830 /* QuoteSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteSlideView.swift; sourceTree = "<group>"; };
 		63FF8D44291460C100F43830 /* QuoteSlideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuoteSlideView.xib; sourceTree = "<group>"; };
+		63FF8D482914614F00F43830 /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
+		63FF8D4C2914618B00F43830 /* QuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +111,13 @@
 		63FF8D0629145DA500F43830 /* Test Project */ = {
 			isa = PBXGroup;
 			children = (
+				63FF8D4A2914616B00F43830 /* ViewModels */,
+				63FF8D462914610800F43830 /* ViewControllers */,
 				63FF8D402914603900F43830 /* Views */,
 				63FF8D3D29145EF700F43830 /* Persistence */,
 				63FF8D3A29145E0300F43830 /* Models */,
 				63FF8D0729145DA500F43830 /* AppDelegate.swift */,
 				63FF8D0929145DA500F43830 /* SceneDelegate.swift */,
-				63FF8D0B29145DA500F43830 /* ViewController.swift */,
 				63FF8D0D29145DA500F43830 /* Main.storyboard */,
 				63FF8D1329145DA600F43830 /* Assets.xcassets */,
 				63FF8D1529145DA600F43830 /* LaunchScreen.storyboard */,
@@ -172,6 +175,38 @@
 				63FF8D44291460C100F43830 /* QuoteSlideView.xib */,
 			);
 			path = QuoteSlideView;
+			sourceTree = "<group>";
+		};
+		63FF8D462914610800F43830 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				63FF8D472914611E00F43830 /* QuotesViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		63FF8D472914611E00F43830 /* QuotesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				63FF8D482914614F00F43830 /* QuotesViewController.swift */,
+			);
+			path = QuotesViewController;
+			sourceTree = "<group>";
+		};
+		63FF8D4A2914616B00F43830 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				63FF8D4B2914617600F43830 /* QuotesViewModel */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		63FF8D4B2914617600F43830 /* QuotesViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				63FF8D4C2914618B00F43830 /* QuotesViewModel.swift */,
+			);
+			path = QuotesViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,11 +343,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				63FF8D3C29145E1500F43830 /* Quote.swift in Sources */,
-				63FF8D0C29145DA500F43830 /* ViewController.swift in Sources */,
 				63FF8D0829145DA500F43830 /* AppDelegate.swift in Sources */,
 				63FF8D0A29145DA500F43830 /* SceneDelegate.swift in Sources */,
 				63FF8D1229145DA500F43830 /* Test_Project.xcdatamodeld in Sources */,
+				63FF8D4D2914618B00F43830 /* QuotesViewModel.swift in Sources */,
 				63FF8D432914606C00F43830 /* QuoteSlideView.swift in Sources */,
+				63FF8D492914614F00F43830 /* QuotesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
